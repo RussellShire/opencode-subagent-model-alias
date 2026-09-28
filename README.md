@@ -91,7 +91,13 @@ After cloning the repository, install the skill into `~/.config/opencode/skills/
 ./scripts/install-smoke-test-skill.sh
 ```
 
-The script replaces an existing copy of this same skill. Restart opencode after installation so it loads the skill. Then invoke it by asking opencode to run the subagent model alias smoke test. The skill dispatches one minimal native subagent per configured alias, so it makes real model calls.
+The installer replaces an existing copy of this same skill. To remove it, run:
+
+```sh
+./scripts/uninstall-smoke-test-skill.sh
+```
+
+The uninstaller removes this skill's `SKILL.md` and removes its directory only if it is empty, preserving any unrelated files there. Restart opencode after installing or uninstalling so it reloads the available skills. After installation, invoke it by asking opencode to run the subagent model alias smoke test. The skill dispatches one minimal native subagent per configured alias, so it makes real model calls.
 
 ## Options
 
